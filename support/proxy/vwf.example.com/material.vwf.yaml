@@ -109,3 +109,18 @@ properties:
   binaryAlpha:
     set: |
       this.binaryAlpha = value;
+
+  ## Transparent value
+  ## 
+  ## @name material.vwf#transparent
+  ## @property
+
+  transparent:
+
+  ## Opacity value
+  ## 
+  ## @name material.vwf#opacity
+  ## @property
+
+  opacity:
+

@@ -103,7 +103,7 @@ define( [ "module", "vwf/model", "vwf/utility", "vwf/utility/color" ], function(
                 return;                
             }
             
-            //console.log(["      creatingNode:",nodeID,childID,childName,childExtendsID,childType]);
+            //console.info("creatingNode( " + nodeID+", "+childID+", "+childExtendsID+", "+childImplementsIDs+", "+childSource+", "+childType+", "+childURI+", "+childName + " )");
             //console.log("Create " + childID);
             var node = undefined, parentNode, threeChild, threeParent, waiting = false;
            
@@ -1184,6 +1184,15 @@ define( [ "module", "vwf/model", "vwf/utility", "vwf/utility/color" ], function(
                     
                         
                 }
+                // these properties should possibly be three js specific
+                if( propertyName == "transparent" ) {
+                    value = threeObject.transparent;
+                    return value;
+                }
+                if( propertyName == "opacity" ) {
+                    value = threeObject.opacity;
+                    return value;
+                }                
             }
             if( threeObject instanceof THREE.Camera ) {
                 switch ( propertyName ) {
